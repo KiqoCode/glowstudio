@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Nav from 'components/Nav';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="absolute h-full w-screen bg-mattis-img bg-cover bg-center -z-10">
+
+      {/* Overlay visible only on mobile device */}
+      <div className='absolute sm:hidden h-full w-screen bg-white/75 -z-10'>
+      </div>
+      <Nav />
     </div>
   );
 }
