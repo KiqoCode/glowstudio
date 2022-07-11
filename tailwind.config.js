@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       colors: {
         'mattis-pink': '#AA6F6E',
+        'mattis-light-pink': '#FEEFEF'
       },
       backgroundImage: {
         'mattis-img': 'url("assets/createbymattis-bg.jpg")',

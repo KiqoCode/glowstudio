@@ -1,6 +1,7 @@
 import React from 'react';
 import { Disclosure } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
+import { UilFacebook, UilInstagram } from '@iconscout/react-unicons';
 
 const navigation = [
   { name: 'VÄLKOMMEN', href: '#', current: false },
@@ -16,7 +17,7 @@ function classNames(...classes) {
 const Nav = () => {
 
   return (
-    <Disclosure as="nav" className="bg-transparent">
+    <Disclosure as="nav" className="bg-transparent top-0 sticky">
       {({ open }) => (
         <>
           <div className="mx-auto sm:px-6 lg:px-8">
@@ -37,13 +38,13 @@ const Nav = () => {
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
                       <div key={item.name} className={classNames(
-                        item.current ? 'underline underline-offset-8 font-normal' : 'hover:underline hover:border-black hover:border-b-2', 'group text-black px-3 py-2 rounded-md text-sm font-medium'
+                        item.current ? 'underline underline-offset-8 font-normal' : '', 'text-black px-3 py-2 rounded-md text-sm font-medium'
                       )}>
                         <a
                           key={item.name}
                           href={item.href}
                           className={classNames(
-                            item.current ? '' : '', 'transition-transform group-hover:translate-y-[-5px]'
+                            item.current ? '' : '', 'transition-colors ease-in-out duration-500 hover:text-mattis-pink'
                           )}
                           aria-current={item.current ? 'page' : undefined}
                         >
@@ -51,6 +52,12 @@ const Nav = () => {
                         </a>
                       </div>
                     ))}
+                    <div className='px-3 py-1'>
+                      <a href='#' className='transition-colors ease-in-out duration-500 hover:text-mattis-pink'><UilFacebook/></a>
+                    </div>
+                    <div className='px-3 py-1'>
+                      <a href='#' className='transition-colors ease-in-out duration-500 hover:text-mattis-pink'><UilInstagram/></a>
+                    </div>
                   </div>
                 </div>
               </div>
