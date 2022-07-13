@@ -1,6 +1,7 @@
 import React from 'react';
 import Nav from 'components/Nav';
-import About from 'components/About';
+import Welcome from 'components/Welcome';
+import Start from 'components/Start';
 
 function App() {
 
@@ -12,13 +13,14 @@ function App() {
           */}
       <section id='top-section'>
         <div className='h-screen w-full bg-mattis-img bg-cover bg-fixed bg-center -z-10'>
-          <div className='absolute sm:hidden h-full w-screen bg-white/75 -z-10'>
+          <div className='absolute hidden mb:block h-full w-screen bg-white/75'>
           </div>
           <Nav />
+          <Start />
         </div>
       </section>
       <section id='bottom-section'>
-        <About/>
+        <Welcome/>
       </section>
     </body>
   );

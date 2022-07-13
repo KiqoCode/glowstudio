@@ -1,6 +1,6 @@
 import React from 'react';
 
-const About = () => {
+const Welcome = () => {
 
   return (
     <div className='bg-mattis-light-pink block w-full h-1/2'>
@@ -14,4 +14,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Welcome;

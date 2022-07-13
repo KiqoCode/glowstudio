@@ -5,6 +5,9 @@ module.exports = {
     './src/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
+    screens: {
+      'mb': {'max': '480px'},
+    },
     extend: {
       colors: {
         'mattis-pink': '#AA6F6E',
