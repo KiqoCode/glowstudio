@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Disclosure } from '@headlessui/react';
+import { Disclosure, Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import { UilFacebook, UilInstagram } from '@iconscout/react-unicons';
 
@@ -39,7 +39,7 @@ const Nav = () => {
                 <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
-                    <XIcon className="block h-6 w-6" aria-hidden="true" />
+                    <XIcon className="block h-6 w-6 text-mattis-pink" aria-hidden="true" />
                   ) : (
                     <MenuIcon className="block h-6 w-6 text-mattis-pink" aria-hidden="true" />
                   )}
@@ -76,24 +76,34 @@ const Nav = () => {
             </div>
           </div>
 
-          <Disclosure.Panel className="hidden mb:block absolute bg-white h-screen w-full">
-            <div className="px-2 pt-2 pb-3 space-y-1">
-              {navigation.map((item) => (
-                <Disclosure.Button
-                  key={item.name}
-                  as="a"
-                  href={item.href}
-                  className={classNames(
-                    item.current ? 'bg-gray-900 text-white' : 'text-black hover:bg-gray-700 hover:text-white',
-                    'block px-3 py-2 rounded-md text-base font-medium'
-                  )}
-                  aria-current={item.current ? 'page' : undefined}
-                >
-                  {item.name}
-                </Disclosure.Button>
-              ))}
-            </div>
-          </Disclosure.Panel>
+          <Transition
+            enter="transition ease-in-out duration-300 transform"
+            enterFrom="-translate-x-full opacity-0"
+            enterTo="translate-x-0 opacity-100"
+            leave="transition ease-in-out duration-300 transform"
+            leaveFrom="translate-x-0 opacity-100"
+            leaveTo="-translate-x-full opacity-0"
+          >
+            <Disclosure.Panel className={classNames(isScrolled ? ' from-black via-black/80' : 'from-white via-white/80', 'bg-gradient-to-br to-transparent hidden mb:block absolute w-9/12 h-[50vh] rounded-br-lg transition-all duration-500')}>
+              <div className="px-2 pt-2 pb-3 space-y-1">
+                {navigation.map((item) => (
+                  <Disclosure.Button
+                    key={item.name}
+                    as="a"
+                    href={item.href}
+                    className={classNames(
+                      item.current ? 'bg-gray-900' : 'hover:bg-gray-700 hover:text-white',
+                      isScrolled ? 'text-white' : 'text-black',
+                      'block px-3 py-2 rounded-md text-base font-medium'
+                    )}
+                    aria-current={item.current ? 'page' : undefined}
+                  >
+                    {item.name}
+                  </Disclosure.Button>
+                ))}
+              </div>
+            </Disclosure.Panel>
+          </Transition>
         </>
       )}
     </Disclosure>
