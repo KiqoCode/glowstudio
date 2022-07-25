@@ -34,9 +34,9 @@ const Nav = () => {
         <>
           <div className="mx-auto px-8 mb:px-1">
             <div className="relative flex items-center justify-between h-16">
-              <div className="absolute inset-y-0 left-0 items-center hidden mb:flex">
+              <div className="absolute inset-y-0 left-0 items-center hidden mb:flex mb:w-full mb:justify-between">
                 {/* Mobile menu button*/}
-                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button className="inline-flex flex-1 items-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XIcon className="block h-6 w-6 text-mattis-pink" aria-hidden="true" />
@@ -44,6 +44,10 @@ const Nav = () => {
                     <MenuIcon className="block h-6 w-6 text-mattis-pink" aria-hidden="true" />
                   )}
                 </Disclosure.Button>
+                <div className='flex flex-1 justify-end mr-2'>
+                  <a href='https://www.facebook.com/createbymattis/' className='text-mattis-pink transition-colors ease-in-out duration-300 hover:text-mattis-pink mr-2'><UilFacebook/></a>
+                  <a href='https://www.instagram.com/Createbymattis/' className='text-mattis-pink transition-colors ease-in-out duration-300 hover:text-mattis-pink'><UilInstagram/></a>
+                </div>
               </div>
               <div className="flex-1 flex items-stretch justify-start">
                 <div className="block mb:hidden">
