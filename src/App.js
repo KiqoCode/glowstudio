@@ -9,7 +9,7 @@ function App() {
     <div>
       <section id='top-section'>
         <div className='h-screen w-full bg-mattis-img bg-cover bg-fixed bg-center -z-10'>
-          <div className='absolute hidden mb:block h-full w-screen bg-white/75'>
+          <div className='absolute hidden mb:block h-screen w-screen bg-white/75'>
           </div>
           <Nav />
           <Start />
