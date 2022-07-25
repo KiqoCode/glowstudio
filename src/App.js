@@ -6,11 +6,7 @@ import Start from 'components/Start';
 function App() {
 
   return (
-    <body>
-
-      {/* Overlay visible only on mobile device 
-          
-          */}
+    <div>
       <section id='top-section'>
         <div className='h-screen w-full bg-mattis-img bg-cover bg-fixed bg-center -z-10'>
           <div className='absolute hidden mb:block h-full w-screen bg-white/75'>
@@ -22,7 +18,7 @@ function App() {
       <section id='bottom-section'>
         <Welcome/>
       </section>
-    </body>
+    </div>
   );
 }
 
