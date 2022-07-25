@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Disclosure } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import { UilFacebook, UilInstagram } from '@iconscout/react-unicons';
@@ -16,8 +16,20 @@ function classNames(...classes) {
 
 const Nav = () => {
 
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  const listenScrollEvent = () => {
+    if (window.scrollY < 70) {
+      setIsScrolled(false);
+    } else if (window.scrollY > 70) {
+      setIsScrolled(true);
+    } 
+  };
+
+  window.addEventListener('scroll', listenScrollEvent);
+
   return (
-    <Disclosure as="nav" className="bg-transparent top-0 sticky z-10">
+    <Disclosure as="nav" className={classNames(isScrolled ? 'bg-black' : 'bg-transparent', 'top-0 sticky z-10 transition-colors duration-500')}>
       {({ open }) => (
         <>
           <div className="mx-auto px-8 mb:px-1">
@@ -29,7 +41,7 @@ const Nav = () => {
                   {open ? (
                     <XIcon className="block h-6 w-6" aria-hidden="true" />
                   ) : (
-                    <MenuIcon className="block h-6 w-6" aria-hidden="true" />
+                    <MenuIcon className="block h-6 w-6 text-mattis-pink" aria-hidden="true" />
                   )}
                 </Disclosure.Button>
               </div>
@@ -38,13 +50,13 @@ const Nav = () => {
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
                       <div key={item.name} className={classNames(
-                        item.current ? 'underline underline-offset-8 font-normal' : '', 'text-black px-3 py-2 rounded-md text-sm font-medium'
+                        item.current ? 'underline underline-offset-8 font-normal' : '', isScrolled ? 'text-white' : 'text-black',' px-3 py-2 rounded-md text-sm font-medium'
                       )}>
                         <a
                           key={item.name}
                           href={item.href}
                           className={classNames(
-                            item.current ? '' : '', 'transition-colors ease-in-out duration-500 hover:text-mattis-pink'
+                            item.current ? '' : '', 'transition-colors ease-in-out duration-300 hover:text-mattis-pink'
                           )}
                           aria-current={item.current ? 'page' : undefined}
                         >
@@ -53,10 +65,10 @@ const Nav = () => {
                       </div>
                     ))}
                     <div className='px-3 py-1'>
-                      <a href='#' className='transition-colors ease-in-out duration-500 hover:text-mattis-pink'><UilFacebook/></a>
+                      <a href='#' className={classNames(isScrolled ? 'text-white' : 'text-black', 'transition-colors ease-in-out duration-300 hover:text-mattis-pink')}><UilFacebook/></a>
                     </div>
                     <div className='px-3 py-1'>
-                      <a href='#' className='transition-colors ease-in-out duration-500 hover:text-mattis-pink'><UilInstagram/></a>
+                      <a href='#' className={classNames(isScrolled ? 'text-white' : 'text-black', 'transition-colors ease-in-out duration-300 hover:text-mattis-pink')}><UilInstagram/></a>
                     </div>
                   </div>
                 </div>
