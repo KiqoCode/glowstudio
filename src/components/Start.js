@@ -11,18 +11,18 @@ const Start = () => {
         <div className='flex flex-row mb:flex-col mt-10 mb:justify-center items-center'>
           <button
             type="button"
-            className="bg-white uppercase px-10 py-5 mr-2 mb-2 rounded-full text-mattis-pink outline-mattis-pink outline-1 outline hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+            className="bg-white text-mattis-pink px-10 py-5 rounded-full border border-mattis-pink uppercase mr-1 mb:mr-0 hover:bg-mattis-pink hover:text-white transition-colors duration-200">
               boka tid - stockholm
           </button>
           <button
             type="button"
-            className="bg-white uppercase px-10 py-5 rounded-full text-mattis-pink outline-mattis-pink outline-1 outline hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+            className="bg-white text-mattis-pink px-10 py-5 rounded-full border border-mattis-pink uppercase mt-2 hover:bg-mattis-pink hover:text-white transition-colors duration-200">
               boka tid - dalarna
           </button>
         </div>
         <button
           type="button"
-          className="bg-mattis-pink px-20 py-5 rounded-full uppercase text-white mt-5">
+          className="bg-mattis-pink px-20 py-5 rounded-full uppercase text-white mt-5 hover:bg-white hover:text-mattis-pink border hover:border-mattis-pink transition-colors duration-200">
             webshop
         </button>
       </div>
