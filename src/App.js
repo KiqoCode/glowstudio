@@ -17,6 +17,7 @@ function App() {
       </section>
       <section id='bottom-section'>
         <Welcome/>
+        <iframe src="https://widget.reco.se/v2/widget/4008268?mode=HORIZONTAL_QUOTE&inverted=false&border=false" height="225" className='w-full'></iframe>
       </section>
     </div>
   );
