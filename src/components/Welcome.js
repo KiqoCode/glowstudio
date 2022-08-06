@@ -9,16 +9,16 @@ const Welcome = () => {
   });
 
   return (
-    <div ref={ref} className='bg-mattis-light-pink block w-full min-h-[400px]'>
+    <div ref={ref} className='flex bg-mattis-light-pink w-full min-h-[500px] items-center justify-center'>
 
       <Transition
         show={inView}
         enter="transition ease-in-out duration-[1000ms] transform"
-        enterFrom="opacity-0 -translate-x-full"
-        enterTo="opacity-100 translate-x-0"
+        enterFrom="opacity-0 translate-y-32"
+        enterTo="opacity-100 translate-y-0"
         leave="transition ease-in-out duration-[1000ms] transform"
-        leaveFrom="translate-x-0 opacity-100"
-        leaveTo="-translate-x-full opacity-0"
+        leaveFrom="translate-y-0 opacity-100"
+        leaveTo="translate-y-32 opacity-0"
         className="flex flex-col text-center px-3 py-[5rem] mb:py-[3rem] items-center justify-center"
       >
         <p className='text-mattis-pink/25 font-normal tracking-widest font-["Playfair_Display"] uppercase'>Välkommen till createbymattis</p>
