@@ -68,7 +68,7 @@ const Nav = () => {
                     <div className="flex space-x-4">
                       {navigation.map((item) => (
                         <div key={item.name} className={classNames(
-                          item.current ? 'underline underline-offset-8 font-normal' : '', isScrolled ? 'text-white' : 'text-black',' px-3 py-2 rounded-md text-sm font-medium'
+                          item.current ? 'underline underline-offset-8' : '', isScrolled ? 'text-white' : 'text-black',' px-3 py-2 rounded-md text-sm font-light'
                         )}>
                           <a
                             key={item.name}
