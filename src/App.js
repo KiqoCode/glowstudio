@@ -2,6 +2,7 @@ import React from 'react';
 import Nav from 'components/Nav';
 import Welcome from 'components/Welcome';
 import Start from 'components/Start';
+import Treatment from 'components/Treatments';
 
 function App() {
 
@@ -17,7 +18,8 @@ function App() {
       </section>
       <section id='bottom-section'>
         <Welcome/>
-        <iframe src="https://widget.reco.se/v2/widget/4008268?mode=HORIZONTAL_QUOTE&inverted=false&border=false" height="225" className='w-full'></iframe>
+        <iframe src="https://widget.reco.se/v2/widget/4008268?mode=HORIZONTAL_QUOTE&inverted=false&border=false" height="225" className='w-full border-b-2'></iframe>
+        <Treatment/>
       </section>
     </div>
   );
