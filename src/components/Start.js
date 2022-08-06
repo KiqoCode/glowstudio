@@ -21,7 +21,7 @@ const Start = () => {
         >
           <img src={require('assets/createbymattis-logo-400.png')} className='max-w-[25rem] mb:max-w-[20rem]' />
           <p className='font-["Playfair_Display"] text-mattis-pink text-4xl mt-10 text-center'>Salongen med det lilla extra</p>
-          <p className='tracking-[10px] text-mattis-pink text-center font-thin mt-5 text-sm'>CREATE BY MATTIS</p>
+          <p className='tracking-[10px] text-mattis-pink text-center font-light mt-5 text-sm'>CREATE BY MATTIS</p>
         </Transition>
         <Transition
           show={showStart}
