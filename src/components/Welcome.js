@@ -5,7 +5,8 @@ import { Transition } from '@headlessui/react';
 const Welcome = () => {
 
   const { ref, inView } = useInView({
-    threshold: 0.55
+    threshold: 0.5,
+    triggerOnce: true
   });
 
   return (
