@@ -4,6 +4,7 @@ import Welcome from 'components/Welcome';
 import Start from 'components/Start';
 import Treatment from 'components/Treatments';
 import Champion from 'components/Champion';
+import Book from 'components/Book';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
         <iframe src="https://widget.reco.se/v2/widget/4008268?mode=HORIZONTAL_QUOTE&inverted=false&border=false" height="225" className='w-full border-b-2'></iframe>
         <Treatment />
         <Champion />
+        <Book />
       </section>
     </div>
   );
