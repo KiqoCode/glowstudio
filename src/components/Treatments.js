@@ -28,7 +28,7 @@ const Treatment = () => {
 
         <div className='flex flex-1 items-center'>
           <div className='p-[10%] mb:p-0'>
-            <p className='uppercase text-mattis-pink/80 tracking-widest text-md'>Behandlingar</p>
+            <p className='uppercase text-mattis-pink/60 tracking-widest text-md'>Behandlingar</p>
             <p className='font-["Playfair_Display"] text-mattis-pink text-5xl mb:text-3xl font-medium'>Välj din behandling</p>
             <p className='mt-5 text-[#222] leading-loose'>Alla ögon är unika och vi har olika förutsättningar för vad våra fransar klarar av för tjocklek, längd och böj, så när du kommer hit går vi tillsammans igenom dina önskemål och jag ser till att du får en behandling som är anpassad för just dig.</p>
             <p className='mt-5 text-[#222] leading-loose'>Du kommer att få en skön stund för dig själv med slutna ögon, avkopplande musik och dessutom gå härifrån med ett fint resultat.</p>
