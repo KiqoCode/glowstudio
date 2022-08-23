@@ -3,6 +3,7 @@ import Nav from 'components/Nav';
 import Welcome from 'components/Welcome';
 import Start from 'components/Start';
 import Treatment from 'components/Treatments';
+import Champion from 'components/Champion';
 
 function App() {
 
@@ -17,9 +18,10 @@ function App() {
         </div>
       </section>
       <section id='bottom-section'>
-        <Welcome/>
+        <Welcome />
         <iframe src="https://widget.reco.se/v2/widget/4008268?mode=HORIZONTAL_QUOTE&inverted=false&border=false" height="225" className='w-full border-b-2'></iframe>
-        <Treatment/>
+        <Treatment />
+        <Champion />
       </section>
     </div>
   );
