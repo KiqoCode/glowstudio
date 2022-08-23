@@ -5,11 +5,12 @@ import { Transition } from '@headlessui/react';
 const Treatment = () => {
 
   const { ref, inView } = useInView({
-    threshold: 0.55
+    threshold: 0.5,
+    triggerOnce: true
   });
 
   return (
-    <div ref={ref} className='bg-white w-full min-h-[500px]'>
+    <div ref={ref} className='bg-white w-full min-h-[750px]'>
 
       <Transition
         show={inView}
