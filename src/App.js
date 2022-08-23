@@ -5,6 +5,7 @@ import Start from 'components/Start';
 import Treatment from 'components/Treatments';
 import Champion from 'components/Champion';
 import Book from 'components/Book';
+import Footer from 'components/Footer';
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
         <Treatment />
         <Champion />
         <Book />
+        <Footer />
       </section>
     </div>
   );
