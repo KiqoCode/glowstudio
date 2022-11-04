@@ -10,7 +10,7 @@ const Welcome = () => {
   });
 
   return (
-    <div ref={ref} className='bg-mattis-light-pink w-full min-h-[500px]'>
+    <div id='welcome' ref={ref} className='bg-mattis-light-pink w-full min-h-[500px]'>
 
       <Transition
         show={inView}

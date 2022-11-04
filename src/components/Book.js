@@ -10,7 +10,7 @@ const Book = () => {
   });
 
   return (
-    <div ref={ref} className='bg-white w-full min-h-[200px]'>
+    <div id='book' ref={ref} className='bg-white w-full min-h-[200px]'>
 
       <Transition
         show={inView}
@@ -41,11 +41,19 @@ const Book = () => {
             <p className='mt-5'>Jag tar enbart emot betalning med kort, Swish eller med Klarna.</p>
             <div className='flex flex-1 mb:flex-col mb:items-center mb:mb-5'>
               <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.location.href='https://www.bokadirekt.se/places/createbymattis-stockholm-14483';
+                }}
                 type="button"
                 className="bg-white text-mattis-pink px-10 py-5 mt-5 mr-3 mb:mr-0 xlg:w-fit rounded-full border border-mattis-pink uppercase hover:bg-mattis-pink hover:text-white transition-colors duration-200">
                   bokning stockholm
               </button>
               <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.location.href='https://www.bokadirekt.se/places/createbymattis-avestahorndal-26950';
+                }}
                 type="button"
                 className="bg-white text-mattis-pink px-10 py-5 mt-5 xlg:w-fit rounded-full border border-mattis-pink uppercase hover:bg-mattis-pink hover:text-white transition-colors duration-200">
                   bokning dalarna

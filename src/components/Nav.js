@@ -4,10 +4,9 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import { UilFacebook, UilInstagram } from '@iconscout/react-unicons';
 
 const navigation = [
-  { name: 'VÄLKOMMEN', href: '#', current: false },
-  { name: 'BEHANDLINGAR', href: '#', current: false },
-  { name: 'BOKA TID', href: '#', current: false },
-  { name: 'BILDER', href: '#', current: false },
+  { name: 'VÄLKOMMEN', href: '#welcome', current: false },
+  { name: 'BEHANDLINGAR', href: '#treatments', current: false },
+  { name: 'BOKA TID', href: '#book', current: false },
 ];
 
 function classNames(...classes) {
@@ -83,10 +82,10 @@ const Nav = () => {
                         </div>
                       ))}
                       <div className='px-3 py-1'>
-                        <a href='#' className={classNames(isScrolled ? 'text-white' : 'text-black', 'transition-colors ease-in-out duration-300 hover:text-mattis-pink')}><UilFacebook/></a>
+                        <a href='https://www.facebook.com/createbymattis/' className={classNames(isScrolled ? 'text-white' : 'text-black', 'transition-colors ease-in-out duration-300 hover:text-mattis-pink')}><UilFacebook/></a>
                       </div>
                       <div className='px-3 py-1'>
-                        <a href='#' className={classNames(isScrolled ? 'text-white' : 'text-black', 'transition-colors ease-in-out duration-300 hover:text-mattis-pink')}><UilInstagram/></a>
+                        <a href='https://www.instagram.com/Createbymattis/' className={classNames(isScrolled ? 'text-white' : 'text-black', 'transition-colors ease-in-out duration-300 hover:text-mattis-pink')}><UilInstagram/></a>
                       </div>
                     </div>
                   </div>

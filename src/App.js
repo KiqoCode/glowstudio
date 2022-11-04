@@ -10,7 +10,7 @@ import Footer from 'components/Footer';
 function App() {
 
   return (
-    <div className='bg-mattis-img bg-cover bg-fixed bg-center relative bg-white/75'>
+    <div className='bg-mattis-img bg-cover bg-fixed bg-center bg-white/75'>
       <div className='absolute hidden mb:block h-[calc(100vh+64px)] w-screen top-0 bottom-0 bg-white/75'>
       </div>
       <Nav />

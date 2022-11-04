@@ -10,7 +10,7 @@ const Treatment = () => {
   });
 
   return (
-    <div ref={ref} className='bg-white w-full min-h-[200px]'>
+    <div id='treatments' ref={ref} className='bg-white w-full min-h-[200px]'>
 
       <Transition
         show={inView}
@@ -35,11 +35,19 @@ const Treatment = () => {
             <p className='mt-5 text-[#222] leading-loose'>Pälsdjur finns i hemmet, så det är bra att veta om du är allergisk eller hundrädd.</p>
             <div className='flex flex-1 justify-center mb:items-center mb:flex-col xlg:flex-col'>
               <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.location.href='https://www.bokadirekt.se/places/createbymattis-stockholm-14483';
+                }}
                 type="button"
                 className="bg-white text-mattis-pink px-10 py-5 mt-5 mr-3 xlg:w-fit rounded-full border border-mattis-pink uppercase hover:bg-mattis-pink hover:text-white transition-colors duration-200">
                   se behandlingar stockholm
               </button>
               <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.location.href='https://www.bokadirekt.se/places/createbymattis-avestahorndal-26950';
+                }}
                 type="button"
                 className="bg-white text-mattis-pink px-10 py-5 mt-5 xlg:w-fit rounded-full border border-mattis-pink uppercase hover:bg-mattis-pink hover:text-white transition-colors duration-200">
                   se behandlingar dalarna

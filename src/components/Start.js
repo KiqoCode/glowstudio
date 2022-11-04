@@ -32,17 +32,29 @@ const Start = () => {
         >
           <div className='flex flex-row mb:flex-col mt-10 mb:justify-center items-center'>
             <button
+              onClick={(e) => {
+                e.preventDefault();
+                window.location.href='https://www.bokadirekt.se/places/createbymattis-stockholm-14483';
+              }}
               type="button"
               className="bg-white text-mattis-pink px-10 py-5 rounded-full border border-mattis-pink uppercase mr-1 mb:mr-0 hover:bg-mattis-pink hover:text-white transition-colors duration-200">
                 boka tid - stockholm
             </button>
             <button
+              onClick={(e) => {
+                e.preventDefault();
+                window.location.href='https://www.bokadirekt.se/places/createbymattis-avestahorndal-26950';
+              }}
               type="button"
               className="bg-white text-mattis-pink px-10 py-5 rounded-full border border-mattis-pink uppercase mt-2 hover:bg-mattis-pink hover:text-white transition-colors duration-200">
                 boka tid - dalarna
             </button>
           </div>
           <button
+            onClick={(e) => {
+              e.preventDefault();
+              window.location.href='https://createbymattis.myshopify.com/';
+            }}
             type="button"
             className="bg-mattis-pink px-20 py-5 rounded-full uppercase text-white mt-5 hover:bg-white hover:text-mattis-pink border hover:border-mattis-pink transition-colors duration-200">
               webshop
