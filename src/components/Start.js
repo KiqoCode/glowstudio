@@ -10,7 +10,7 @@ const Start = () => {
   },[]);
 
   return (
-    <div className='flex h-full w-full items-center justify-start mb:justify-center pl-[17vw] mb:pl-0 pb-32'>
+    <div className='flex h-screen w-full items-center justify-start mb:justify-center pl-[17vw] mb:pl-0 pb-32'>
       <div className='flex flex-col items-center justify-center z-0'>
         <Transition
           show={showStart}
