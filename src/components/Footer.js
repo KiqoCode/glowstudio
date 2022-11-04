@@ -27,8 +27,8 @@ const Footer = () => {
         </div>
         <div className='flex-1 ml-16 lg:ml-0'>
           <p className='text-mattis-pink font-bold text-xl font-["Playfair_Display"] mb-4'>Följ Oss</p>
-          <a className='text-mattis-pink' href='#'><UilFacebook width='50' height='50'/></a>
-          <a className='text-mattis-pink' href='#'><UilInstagram width='50' height='50'/></a>
+          <a className='text-mattis-pink' href='https://www.facebook.com/createbymattis/'><UilFacebook width='50' height='50'/></a>
+          <a className='text-mattis-pink' href='https://www.instagram.com/Createbymattis/'><UilInstagram width='50' height='50'/></a>
         </div>
       </div>
       <div className='w-[80%] mt-24 flex justify-center pt-4 border-t'>
