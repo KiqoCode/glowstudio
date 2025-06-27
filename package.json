@@ -1,12 +1,9 @@
 {
-  "name": "createbymattis",
+  "name": "glowstudio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@capacitor/android": "^4.4.0",
-    "@capacitor/cli": "^4.4.0",
-    "@capacitor/core": "^4.4.0",
-    "@headlessui/react": "^1.6.5",
+    "@headlessui/react": "^2.2.0",
     "@heroicons/react": "^1.0.6",
     "@iconscout/react-unicons": "^1.1.6",
     "@testing-library/jest-dom": "^5.16.4",

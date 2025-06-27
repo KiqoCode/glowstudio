@@ -1,10 +1,10 @@
-import React, {require} from 'react';
+import React from 'react';
 import { useInView } from 'react-intersection-observer';
-import { Transition } from '@headlessui/react';
+// import { Transition } from '@headlessui/react';
 
 const Treatment = () => {
 
-  const { ref, inView } = useInView({
+  const { ref } = useInView({
     threshold: 0.5,
     triggerOnce: true
   });
@@ -12,52 +12,50 @@ const Treatment = () => {
   return (
     <div id='treatments' ref={ref} className='bg-white w-full min-h-[200px]'>
 
-      <Transition
-        show={inView}
-        enter="transition ease-in-out duration-[2500ms] transform"
-        enterFrom="opacity-0 translate-y-32"
-        enterTo="opacity-100 translate-y-0"
-        leave="transition ease-in-out duration-[2500ms] transform"
-        leaveFrom="translate-y-0 opacity-100"
-        leaveTo="translate-y-32 opacity-0"
-        className="flex flex-row lg:flex-col-reverse w-full justify-center p-5"
-      >
-        <div className='flex flex-1 justify-center items-center'>
-          <img src={require('assets/createbymattis-behandlingar.jpg')} className='border-mattis-light-pink border-8 w-full' />
-        </div>
+      <div className='flex flex-col items-center justify-center px-3 mb:py-[2rem]'>
+        <div className='p-[5%] mb:p-0'>
+          <p className='uppercase text-mattis-pink/60 tracking-widest text-md'>Behandlingar</p>
+          <p className='font-["Playfair_Display"] text-mattis-pink text-5xl mb:text-3xl font-medium'>Välj din behandling</p>
+          <p className='mt-5 text-[#222] leading-loose'>På Glow Studio erbjuder vi noggrant utvalda behandlingar som kombinerar effektiva resultat med avkoppling och omsorg.
+            Vi använder alltid marknadens främsta produkter - såsom <span className="font-semibold">InLei</span> för lash- och brow lift -
+            och anpassar varje behandling efter dina unika behov och önskemål.</p>
+          <div className="grid grid-cols-3 lg:grid-cols-1 gap-6 sm:gap-10">
 
-        <div className='flex flex-1 items-center'>
-          <div className='p-[10%] mb:p-0'>
-            <p className='uppercase text-mattis-pink/60 tracking-widest text-md'>Behandlingar</p>
-            <p className='font-["Playfair_Display"] text-mattis-pink text-5xl mb:text-3xl font-medium'>Välj din behandling</p>
-            <p className='mt-5 text-[#222] leading-loose'>Alla ögon är unika och vi har olika förutsättningar för vad våra fransar klarar av för tjocklek, längd och böj, så när du kommer hit går vi tillsammans igenom dina önskemål och jag ser till att du får en behandling som är anpassad för just dig.</p>
-            <p className='mt-5 text-[#222] leading-loose'>Du kommer att få en skön stund för dig själv med slutna ögon, avkopplande musik och dessutom gå härifrån med ett fint resultat.</p>
-            <p className='mt-5 text-[#222] leading-loose'>Pälsdjur finns i hemmet, så det är bra att veta om du är allergisk eller hundrädd.</p>
-            <div className='flex flex-1 justify-center mb:items-center mb:flex-col xlg:flex-col'>
-              <button
-                onClick={(e) => {
-                  e.preventDefault();
-                  window.location.href='https://www.bokadirekt.se/places/createbymattis-stockholm-14483';
-                }}
-                type="button"
-                className="bg-white text-mattis-pink px-10 py-5 mt-5 mr-3 xlg:w-fit rounded-full border border-mattis-pink uppercase hover:bg-mattis-pink hover:text-white transition-colors duration-200">
-                  se behandlingar stockholm
-              </button>
-              <button
-                onClick={(e) => {
-                  e.preventDefault();
-                  window.location.href='https://www.bokadirekt.se/places/createbymattis-avestahorndal-26950';
-                }}
-                type="button"
-                className="bg-white text-mattis-pink px-10 py-5 mt-5 xlg:w-fit rounded-full border border-mattis-pink uppercase hover:bg-mattis-pink hover:text-white transition-colors duration-200">
-                  se behandlingar dalarna
-              </button>
+            <div className="bg-gray-50 p-6 rounded-2xl shadow-md hover:shadow-lg transition">
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Lash Lift & Brow Lift (med InLei)</h3>
+              <p className="text-gray-700">
+        Lyft fram dina naturliga fransar och bryn med skonsamma, högkvalitativa produkter.
+        Resultatet? Böjda, fylliga fransar och perfekt formade bryn – utan behov av mascara.
+              </p>
+            </div>
+
+
+            <div className="bg-gray-50 p-6 rounded-2xl shadow-md hover:shadow-lg transition">
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Ansiktsbehandlingar</h3>
+              <p className="text-gray-700">
+        Skräddarsydda behandlingar som återfuktar, rengör och stärker huden.
+        Anpassat efter din hudtyp för ett synligt och långvarigt resultat.
+              </p>
+            </div>
+
+
+            <div className="bg-gray-50 p-6 rounded-2xl shadow-md hover:shadow-lg transition">
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Nagelbehandlingar</h3>
+              <p className="text-gray-700">
+        Klassisk manikyr, gelélack eller förstärkning – vi ger dina naglar glans, stil och hållbarhet med största noggrannhet.
+              </p>
+            </div>
+
+
+            <div className="bg-gray-50 p-6 rounded-2xl shadow-md hover:shadow-lg transition">
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Kombobehandlingar</h3>
+              <p className="text-gray-700">
+        Kombinera flera behandlingar – som lash & brow lift eller ansiktsbehandling med handmassage – för en komplett upplevelse.
+              </p>
             </div>
           </div>
         </div>
-
-
-      </Transition>
+      </div>
 
     </div>
   );

@@ -8,18 +8,16 @@ const Footer = () => {
 
       <div className='w-[80%] flex flex-row lg:flex-col lg:items-start'>
         <div className='flex-1 lg:mb-5'>
-          <img src={require('assets/createbymattis-logo-400.png')} />
+          <img src={require('assets/logo-1.png')} className='max-w-[25rem] mb:max-w-[20rem]' />
         </div>
         <div className='flex-1 ml-16 lg:ml-0 lg:mb-5'>
-          <p className='text-mattis-pink font-bold text-xl font-["Playfair_Display"] mb-4'>Create By Mattis</p>
-          <p className='text-sm leading-relaxed'>Jag heter Mathias och är Certifierad frans & bryn stylist. Jag driver Create by Mattis som jag har för tillfället hemma i ett enskilt rum.</p>
+          <p className='text-mattis-pink font-bold text-xl font-["Playfair_Display"] mb-4'>Glow Studio</p>
         </div>
         <div className='flex-1 ml-16 lg:ml-0 lg:mb-5'>
           <p className='text-mattis-pink font-bold text-xl font-["Playfair_Display"] mb-4'>Kontaktuppgifter</p>
-          <p className='text-sm mb-1'><UilMapMarker className='inline text-mattis-pink'/> Buntmakarvägen 103, 141 73 Segeltorp</p>
-          <p className='text-sm mb-1'><UilMapMarker className='inline text-mattis-pink'/> Stora Vägen 81, 774 68 Horndal</p>
-          <p className='text-sm mb-1'><UilPhone className='inline text-mattis-pink'/> 073–691 46 09</p>
-          <p className='text-sm'><UilEnvelope className='inline text-mattis-pink'/> info@createbymattis.se</p>
+          <p className='text-sm mb-1'><UilMapMarker className='inline text-mattis-pink'/> Häradsvägen 119, 141 72 Segeltorp</p>
+          <p className='text-sm mb-1'><UilPhone className='inline text-mattis-pink'/> 073-691 46 09</p>
+          <p className='text-sm'><UilEnvelope className='inline text-mattis-pink'/> info@glowstudio.se</p>
         </div>
         <div className='flex-1 ml-16 lg:ml-0 lg:mb-5'>
           <p className='text-mattis-pink font-bold text-xl font-["Playfair_Display"] mb-4'>Öppettider</p>
@@ -27,12 +25,12 @@ const Footer = () => {
         </div>
         <div className='flex-1 ml-16 lg:ml-0'>
           <p className='text-mattis-pink font-bold text-xl font-["Playfair_Display"] mb-4'>Följ Oss</p>
-          <a className='text-mattis-pink' href='https://www.facebook.com/createbymattis/'><UilFacebook width='50' height='50'/></a>
-          <a className='text-mattis-pink' href='https://www.instagram.com/Createbymattis/'><UilInstagram width='50' height='50'/></a>
+          <a className='text-mattis-pink' href='https://www.facebook.com/glowstudiose/'><UilFacebook width='50' height='50'/></a>
+          <a className='text-mattis-pink' href='https://www.instagram.com/glowstudiose/'><UilInstagram width='50' height='50'/></a>
         </div>
       </div>
       <div className='w-[80%] mt-24 flex justify-center pt-4 border-t'>
-        <p className='text-sm'>© Create by Mattis 2022. All Rights Reserved.</p>
+        <p className='text-sm'>© GlowStudio 2025. All Rights Reserved.</p>
       </div>
 
     </div>
